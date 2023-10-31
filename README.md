@@ -1,6 +1,6 @@
 # Entimoi Apateones. Xanthi,Greece
 
-Subsites:\n
+Subsites:
 -Landing Site
 -Apply Site
 -Who we are
