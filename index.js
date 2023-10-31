@@ -20,5 +20,5 @@ document.addEventListener('DOMContentLoaded', function() {
         heroPlaceholder.outerHTML = heroRequest.responseText;
       }
     };
-    navbarRequest.send();
+    heroRequest.send();
   });
