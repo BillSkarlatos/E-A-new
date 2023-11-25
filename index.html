@@ -3,159 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Έντιμοι Απατεώνες</title>
-    <script src="script.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        body {
-    font-family: "Montserrat", sans-serif;
-    background: #e9e9e9;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-  
-  h1 {
-    font-size: 40px;
-    text-align: center;
-  }
-  
-  .container{
-    cursor: pointer;
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 30px;
-    height: 20px;
-  }
-  
-  .bars{
-    width: 30px;
-    height: 4px;
-    background: #000;
-  }
-  
-  .bars::before,
-  .bars::after{
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 4px;
-    background: #000;
-  }
-  
-  .bars::before{
-    margin-top: 9px;
-  }
-  
-  .bars::after{
-    margin-top: 18px;
-  }
-  
-  nav{
-    position: absolute;
-    width: 100%;
-    height: 30px;
-    background: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: -200vw;
-  }
-  
-  nav ul {
-    list-style: none;
-  }
-  
-  nav ul li{
-    margin: 50px 0;
-  }
-  
-  nav ul li a{
-    color: #fafafa;
-    font-size: 2em;
-    text-decoration: none;
-    font-weight: 500;
-    position: relative;
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  nav ul li a:after{
-    content: '';
-    width: 100%;
-    position: absolute;
-    height: 3px;
-    border-radius: 5px;
-    background: #fff;
-    bottom: -10px;
-    left: 0;
-    transform-origin: left;
-    transition: transform .5s ease;
-    transform: scaleX(0);
-  }
-  
-  
-  nav ul li a:hover:after{
-    transform: scaleX(1);
-  }
-  
-  nav .close {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    top: 6%;
-    right: 5%;
-    cursor: pointer;
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  nav h2{
-    position: absolute;
-    top:5%;
-    left: 5%;
-    opacity: 0;
-    pointer-events: none;
-    color: #fff;
-    font-size: 2em;
-  }
-  
-  nav .close div::before,
-  nav .close div::after{
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 4px;
-    background: #fff;
-    transition: background .5s ease;
-  }
-  nav .close div::before{
-    transform: rotate(-45deg);
-  }
-  
-  nav .close div::after{
-    transform: rotate(45deg);
-  }
-  
-  nav .close:hover div::before,
-  nav .close:hover div::after{
-    background: rgb(209, 3, 3);
-  }
-  
-  @media (max-width: 992px){
-    h1{
-      font-size: 25px;
-    }
-  }
-    </style>
+    <title>Ενριμοι Απατεώνες</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/445292ce18.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div class="nvbar" id="navbar-placeholder"></div>
-    <div class="hero" id="hero-placeholder"></div>
+    <div id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo"><span>B</span>ill Skarlatos</div>
+                <ul id="sidebar">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1>Hi! I'm <span>Bill</span> Skarlatos,<br>from Thessaloniki, Greece <img src="resources/Gr flag.png"></h1>
+            </div>
+        </div>
+    </div>
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col1">
+                    <img src="Images/filler image 1.jpg" alt="">
+                </div>
+                <div class="col2">
+                    <h1 class="subtitle">Λίγα λόγια για εμάς</h1>
+                    <p>I'm a third-year student in the Computer Science Departement of the Aristotle University of Thessaloniki, on my way to aquire my BSc degree in Informatics with an expertise in Quantum Computing and Data Science and I've set my sights on an MSc program on Quantum Computing and A.I. Currently, I am devoting my free time between freelancing as a web developer and also developing my own projects. If you would like to learn more about me or even want to simply say hello, click <a href="#contact">here</a> and either leave me a message or find me on my social media platforms and I will get back to you as soon as possible.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links" onclick="opentab('CWO')">Currently Working on</p>
+                    </div>
+                    
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Data Science</span><br>Analyzing and Predicting Data Using modern Frameworks in Python</li>
+                            <li><span>Web Development</span><br>Developing Full Stack Websites</li>
+                            <li><span>Optimisation</span><br>Using calculus to determine complexity and improving it</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>CSD, AUTh, BSc 2021-Present</span><br>Currently in my third year in the Computer Science Departement of the Aristotle Usiversity of Thessaloniki for my BSc Degree </li>
+                            <li><span>1st High School of Xanthi 2018-2021</span><br>Finished all of my primary education averaging higher than 95%</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="CWO">
+                        <ul>
+                            <li><span>Task Manager App</span><br>An algorithm that takes inputs taks, time required to complete them, importance factor etc and optimally organise them for the user </li>
+                            <li><span>Entimoi Apateones Website</span><br>A site for the Group "Entimoi Apateones", based in Xanthi, Gr</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Services -->
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Developing modern web pages as a full-stack developer using HTML, CSS, JavaScript, PHP along with multiple frameworks including but not limited to: blade, laravell, vue, SCSS, GSAP and nodeJS.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    <h2>Data Science</h2>
+                    <p>Analyzing data using calculus in Python in order to make conclusions about the data that we have and accurate predictions about what we don't.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-calculator"></i>
+                    <h2>Algorithm Optimization</h2>
+                    <p>The use of various tools to determine the O(), Ω() and Θ() complexity of any given anlorithm and the use of calculus, statistics and known optimal algorithms in order to get the fastest possible result.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Portfolio Section -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">My Work <span class="portfolio">/ Portfolio</span></h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="resources/project.png">
+                    <div class="layer">
+                        <h3>Project 1</h3>
+                        <p>This is a project. This text is going to describe the purposes of that project</p>
+                        <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="resources/project.png">
+                    <div class="layer">
+                        <h3>Project 2</h3>
+                        <p>This is a project. This text is going to describe the purposes of that project</p>
+                        <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="resources/project.png">
+                    <div class="layer">
+                        <h3>Project 3</h3>
+                        <p>This is a project. This text is going to describe the purposes of that project</p>
+                        <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!-- contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><a href="mailto:skarlatosbill@gmail.com"><i class="fa-solid fa-envelope"></i></a>skarlatosbill@gmail.com</p>
+                    <div class="social-media">
+                        <a href="https://www.linkedin.com/in/billskarlatos/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/Skarlatos.Bill" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
+                        <a href="https://www.instagram.com/bill_sk._/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                    <a href="resources/NOTMYCV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form method="post" action="https://script.google.com/macros/s/AKfycbyunN0Oax5v3yNg0OIdJyT-80zCz6ZfQZPi4D7JmDZpByXlexBpyZGF4LuBf98fJTkiVA/exec" name="contact-form">
+                        <input type="text"name="your-name" placeholder="Your Name">
+                        <input type="text"name="your-number" placeholder="Your Number">
+                        <input type="your-email" name="Email" placeholder="Your Email">
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" value="Submit" id="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="copyright">
+        <p><i class="fa-regular fa-copyright"></i> Bill <span>Skarlatos</span></p>
+        <div class="btn btn2"><a href="https:/github.com/BillSkarlatos/Personal-website" target="_blank">{View Website Code}</a></div>
+    </div>
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tname){
+        for(tbl of tablinks){
+            tbl.classList.remove("active-link");
+        }
+        for(tbc of tabcontents){
+            tbc.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tname).classList.add("active-tab")
+    }
+
+    var sideBar=document.getElementById("sidebar");
+
+    function openMenu(){
+        sideBar.style.right = "0"
+    }
+
+    function closeMenu(){
+        sideBar.style.right = "-200px"
+    }
+
+    window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar');
+    var scrolled = window.scrollY > 0;
+
+    if (scrolled) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+    });
+</script>
+<script src="Google Sheet.js"></script>
 </body>
 </html>
