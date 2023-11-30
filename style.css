@@ -29,13 +29,14 @@ body{
 }
 
 .navbar{
-    width: 85%;
+    width: 95%;
+    left: 2.5%;
     z-index: 999;
     position: fixed;
     background: none;
     padding: 15px 40px;
     border-radius: 20px;
-    transition: background-color 0.7s ease;
+    transition: background-color 1s ease;
 }
 
 .navbar.scrolled {
@@ -50,13 +51,12 @@ nav{
 }
 
 .logo{
-    font-weight: 700;
-    font-size: 150%;
-    color: #FFF;
+    height: 8vh;
 }
 
-.logo span{
-    color: #FB2576;
+.logo img{
+    height: 90%;
+    border-radius: 50%;
 }
 
 nav ul li{
@@ -89,25 +89,44 @@ nav ul li a:hover::after{
 
 /* ------------ Landing Section -----------------  */
 
-.header-text{
-    margin-top: 20%;
+.header-video{
+    position: relative;
+    margin-top: 2%;
     font-size: 30px;
+    left: -2.5%;
     align-items: center;
-    justify-content: center;;
+    justify-content: center;
 }
 
-.header-text h1{
-    font-size: 60px;
-    margin-top: 10px;
+.header-video video{
+    border-radius: 25px;
 }
 
-.header-text h1 span{
-    color: #FB2576;
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #57068c;
+    text-align: center;
 }
 
-.header-text h1 img{
-    width: 48px;
+.text-overlay h1 {
+    font-weight: 600;
+    position: relative;
+    margin-top: 45%;
+    padding: 5px;
+    background-color: #e1d2f0;
+    border-radius: 15px;
+    right: -60%;
+    transition: opacity 0.3s;
 }
+
+.text-overlay h1:hover {
+    cursor:none;
+    opacity: 0.5;
+}
+
 
 /* About me */
 
@@ -145,17 +164,18 @@ nav ul li a:hover::after{
 }
 
 .subtitle{
-    font-size: 60px;
-    font-weight: 600;
-    color: #FFF;
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #000000;
 }
 
 .subtitle span{
-    color: #FB2576;
+    color: #57068c;
 }
 
 span.portfolio{
-    color: #FFF;
+    color: #57068c;
 }
 
 /* -------------- Tab Titles ---------------- */
@@ -225,7 +245,7 @@ span.portfolio{
 }
 
 .services-list div{
-    background: #000000;
+    background: #3F0071;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -240,16 +260,22 @@ span.portfolio{
 
 .services-list div h2{
     font-size: 30px;
+    color: #FFF;
     font-weight: 500;
     margin-bottom: 15px;
 }
 
 .services-list div a{
     text-decoration: none;
+    font-weight: 500;
     color: #FFF;
     font-size: 12px;
     margin-top: 20px;
     display: inline-block;
+}
+
+.services-list div p{
+    color: #e1d2f0;
 }
 
 .services-list div:hover{
@@ -289,6 +315,7 @@ span.portfolio{
 
 .layer{
     width: 100%;
+    color: #FFF;
     height: 0;
     background: linear-gradient(rgba(0,0,0,0.5),#150050);
     border-radius: 10px;
@@ -463,12 +490,12 @@ nav .fa-solid{
 }
 
 @media only screen and (max-width: 800px){
-    .header-text{
+    .video{
         margin-top: 70%;
         font-size: 24px;
     }
 
-    .header-text h1{
+    .header-video h1{
         font-size: 44px;
     }
 
@@ -506,10 +533,6 @@ nav .fa-solid{
 
     .subtitle{
         font-size: 40px;
-    }
-
-    span.portfolio{
-        display: none;
     }
 
     .col1, .col2{

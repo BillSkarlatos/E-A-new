@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ενριμοι Απατεώνες</title>
+    <title>Εντιμοι Απατεώνες</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/445292ce18.js" crossorigin="anonymous"></script>
 </head>
@@ -12,7 +12,7 @@
     <div id="header">
         <div class="container">
             <nav class="navbar">
-                <div class="logo"><span>B</span>ill Skarlatos</div>
+                <div class="logo"><img src="Images/filler image 2.jpg"></div>
                 <ul id="sidebar">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -23,9 +23,14 @@
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openMenu()"></i>
             </nav>
-            <div class="header-text">
-                <p>Software Developer</p>
-                <h1>Hi! I'm <span>Bill</span> Skarlatos,<br>from Thessaloniki, Greece <img src="resources/Gr flag.png"></h1>
+            <div class="header-video">
+              <video autoplay muted loop id="video-background">
+                <source src="Videos/Vid1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div class="text-overlay">
+                <h1>Εντιμοι Απατεωνες</h1>
+              </div>
             </div>
         </div>
     </div>
@@ -37,12 +42,11 @@
                     <img src="Images/filler image 1.jpg" alt="">
                 </div>
                 <div class="col2">
-                    <h1 class="subtitle">Λίγα λόγια για εμάς</h1>
-                    <p>I'm a third-year student in the Computer Science Departement of the Aristotle University of Thessaloniki, on my way to aquire my BSc degree in Informatics with an expertise in Quantum Computing and Data Science and I've set my sights on an MSc program on Quantum Computing and A.I. Currently, I am devoting my free time between freelancing as a web developer and also developing my own projects. If you would like to learn more about me or even want to simply say hello, click <a href="#contact">here</a> and either leave me a message or find me on my social media platforms and I will get back to you as soon as possible.</p>
+                    <h1 class="subtitle">Λίγα λόγια για τους <span>ΕΑ</span></h1>
+                    <p>Οι έντιμοι απατεώνες είναι μια θεατρική ομάδα που υδρήθηκε στην Ξάνθη το 2012 από...</p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('Education')">Education</p>
-                        <p class="tab-links" onclick="opentab('CWO')">Currently Working on</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Ο Σκοπός μας</p>
+                        <p class="tab-links" onclick="opentab('Education')">Οι δράσεις μας</p>
                     </div>
                     
                     <div class="tab-contents active-tab" id="skills">
@@ -58,75 +62,70 @@
                             <li><span>1st High School of Xanthi 2018-2021</span><br>Finished all of my primary education averaging higher than 95%</li>
                         </ul>
                     </div>
-                    <div class="tab-contents" id="CWO">
-                        <ul>
-                            <li><span>Task Manager App</span><br>An algorithm that takes inputs taks, time required to complete them, importance factor etc and optimally organise them for the user </li>
-                            <li><span>Entimoi Apateones Website</span><br>A site for the Group "Entimoi Apateones", based in Xanthi, Gr</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </div>
         
     </div>
 
+<!-- Portfolio Section -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">Τα Μέλη των <span class="portfolio">Ε Α</span></h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Images/filler image 3.jpg">
+                    <div class="layer">
+                        <h3>Μιχαλης Σαμαράς</h3>
+                        <p>Γειά σας, είμαι ο Μιχάλης και είμαι ενα από τα ιδρυτικά μέλη της ομάδας. Είμαι υπεύθυνος για την σκηνοθεσία των παραστάσεων και την οργάνωση των μελών</p>
+                        <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/filler image 3.jpg">
+                    <div class="layer">
+                        <h3>Μαρία Παππαδοπούλου</h3>
+                        <p>Καλησπέρα και από εμένα, είμαι η Μαρία και λειτουργώ ως ο COO της ομάδας ...</p>
+                        <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Images/filler image 3.jpg">
+                    <div class="layer">
+                        <h3>Σταύρος Μπακόλας</h3>
+                        <p>Χαιρετώ και εγώ, είμαι ο Σταύρος και είμαι κι εγώ ενα από τα ιδρυτικά μέλη της ομάδας ...</p>
+                        <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">Δες και τα άλλα μέλη μας</a>
+        </div>
+    </div>
+
     <!-- Services -->
     <div id="services">
         <div class="container">
-            <h1 class="subtitle">My Services</h1>
+            <h1 class="subtitle">Θέλεις να γίνεις και <span>εσύ</span> μέλος;</h1>
             <div class="services-list">
                 <div>
                     <i class="fa-solid fa-code"></i>
-                    <h2>Web Development</h2>
-                    <p>Developing modern web pages as a full-stack developer using HTML, CSS, JavaScript, PHP along with multiple frameworks including but not limited to: blade, laravell, vue, SCSS, GSAP and nodeJS.</p>
+                    <h2>Είσαι Ηθοποιός;</h2>
+                    <p>Οι έντιμοι απατεώνες αναζητούν συνεχώς νέους ηθοποιούς για τις ετήσιες παραστάσεις τους . . .</p>
                     <a href="#">Learn More</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-magnifying-glass-chart"></i>
-                    <h2>Data Science</h2>
-                    <p>Analyzing data using calculus in Python in order to make conclusions about the data that we have and accurate predictions about what we don't.</p>
+                    <h2>Είσαι Μουσικός;</h2>
+                    <p>Χαρακτηριστικό των έντιμων απατεώνων είναι η ζωντανή μουσική που συνοδεύει κάθε παράσταση . . .</p>
                     <a href="#">Learn More</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-calculator"></i>
-                    <h2>Algorithm Optimization</h2>
-                    <p>The use of various tools to determine the O(), Ω() and Θ() complexity of any given anlorithm and the use of calculus, statistics and known optimal algorithms in order to get the fastest possible result.</p>
+                    <h2>Θέλεις να συμμετέχεις στα λοιπά <br> Διαδικαστικά;</h2>
+                    <p>Θέλεις να μας βοηθήσεις στις εθελοντικές μας δράσεις; Θέλεις να βοηθήσεις στην τεχνική υποστήριξη της ομάδας; . . .</p>
                     <a href="#">Learn More</a>
                 </div>
             </div>
-        </div>
-    </div>
-<!-- Portfolio Section -->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="subtitle">My Work <span class="portfolio">/ Portfolio</span></h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="resources/project.png">
-                    <div class="layer">
-                        <h3>Project 1</h3>
-                        <p>This is a project. This text is going to describe the purposes of that project</p>
-                        <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="resources/project.png">
-                    <div class="layer">
-                        <h3>Project 2</h3>
-                        <p>This is a project. This text is going to describe the purposes of that project</p>
-                        <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="resources/project.png">
-                    <div class="layer">
-                        <h3>Project 3</h3>
-                        <p>This is a project. This text is going to describe the purposes of that project</p>
-                        <a href="#" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-            <a href="#" class="btn">See more</a>
         </div>
     </div>
 
@@ -135,14 +134,14 @@
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="subtitle">Contact Me</h1>
-                    <p><a href="mailto:skarlatosbill@gmail.com"><i class="fa-solid fa-envelope"></i></a>skarlatosbill@gmail.com</p>
+                    <h1 class="subtitle">Βρες μας εδώ</h1>
+                    <p><a href="mailto:skarlatosbill@gmail.com"><i class="fa-solid fa-envelope"></i></a>ea@gmail.com</p>
                     <div class="social-media">
                         <a href="https://www.linkedin.com/in/billskarlatos/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="https://www.facebook.com/Skarlatos.Bill" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
                         <a href="https://www.instagram.com/bill_sk._/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
                     </div>
-                    <a href="resources/NOTMYCV.pdf" download class="btn btn2">Download CV</a>
+                    <a href="resources/NOTMYCV.pdf" download class="btn btn2">Γίνε Μέλος</a>
                 </div>
                 <div class="contact-right">
                     <form method="post" action="https://script.google.com/macros/s/AKfycbyunN0Oax5v3yNg0OIdJyT-80zCz6ZfQZPi4D7JmDZpByXlexBpyZGF4LuBf98fJTkiVA/exec" name="contact-form">
@@ -150,7 +149,7 @@
                         <input type="text"name="your-number" placeholder="Your Number">
                         <input type="your-email" name="Email" placeholder="Your Email">
                         <textarea name="message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" value="Submit" id="submit" class="btn btn2">Submit</button>
+                        <button type="submit" value="Submit" id="submit" class="btn btn2">Αποστολή</button>
                     </form>
                 </div>
             </div>
