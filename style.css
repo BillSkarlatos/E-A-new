@@ -18,14 +18,14 @@ body{
 /* ------------- Navbar ------------------ */
 
 #header{
-    width: 100%;
+    width: 95%;
     height: 100vh;
     background-size: cover;
     background-position: center;
 }
 
 .container{
-    padding: 10px 10%;
+    padding: 10px;
 }
 
 .navbar{
@@ -41,6 +41,7 @@ body{
 
 .navbar.scrolled {
     background-color: #3F0071;
+    color: #FFF;
 }
 
 nav{
@@ -90,16 +91,19 @@ nav ul li a:hover::after{
 /* ------------ Landing Section -----------------  */
 
 .header-video{
+    width: 90vw;
     position: relative;
-    margin-top: 2%;
+    margin-top: 4%;
     font-size: 30px;
-    left: -2.5%;
     align-items: center;
     justify-content: center;
+    left: 5vw;
 }
 
 .header-video video{
     border-radius: 25px;
+    margin-left: 5vw;
+    width: 80vw;
 }
 
 .text-overlay {
@@ -112,13 +116,15 @@ nav ul li a:hover::after{
 }
 
 .text-overlay h1 {
+    font-size: 48px;
     font-weight: 600;
     position: relative;
     margin-top: 45%;
     padding: 5px;
     background-color: #e1d2f0;
     border-radius: 15px;
-    right: -60%;
+    top: 60%;
+    right: -40%;
     transition: opacity 0.3s;
 }
 
@@ -131,7 +137,8 @@ nav ul li a:hover::after{
 /* About me */
 
 #about{
-    padding: 80px 0;   
+    padding: 80px; 
+    margin-top: 100px;  
 }
 
 .row{
@@ -368,16 +375,18 @@ span.portfolio{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #FFF;
+    border: 1px solid #57068c;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #FFF;
-    transition: background 0.6s;
+    color: #57068c;
+    transition: 0.6s;
 }
 
 .btn:hover{
     background: #150050;
+    color: #e1d2f0;
+    font-weight: 600;
 }
 
 /* ------------ Contact me ------------------ */
@@ -431,16 +440,18 @@ span.portfolio{
     display: inline-block;
     background:transparent;
     transition: 0.5s;
+    font-weight: 600;
 }
 
 .btn.btn2 a{
     text-decoration: none;
-    color: #FFF;
+    color: #e1d2f0;
 }
 
 .btn.btn2:hover{
     display: inline-block;
-    background:#FB2576;
+    background:#3F0071;
+    color: #FFF;
 }
 
 .contact-right form{
@@ -467,22 +478,91 @@ form .btn2{
 
 /*--------------- footer ------------- */
 
-.copyright{
-    background: #131313;
-    width: 100%;
-    text-align: center;
-    padding-top: 25px;
-    font-weight: 300;
-    margin-top: 20px;
-}
-
-.copyright .btn2{
-    margin-top: 10px;
-}
-
-.copyright p span{
-    color: #FB2576;
-}
+.footer-clean {
+    padding:50px 0;
+    background-color:#4b4c4d;
+    color:#ccc;
+  }
+  
+  .footer-clean h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  
+  .footer-clean ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-clean ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-clean ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-clean .item.social {
+    text-align:right;
+  }
+  
+  @media (max-width:767px) {
+    .footer-clean .item {
+      text-align:center;
+      padding-bottom:20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-clean .item.social {
+      text-align:center;
+    }
+  }
+  
+  .footer-clean .item.social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin-left:10px;
+    margin-top:22px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-clean .item.social > a:hover {
+    opacity:0.9;
+  }
+  
+  @media (max-width:991px) {
+    .footer-clean .item.social > a {
+      margin-top:40px;
+    }
+  }
+  
+  @media (max-width:767px) {
+    .footer-clean .item.social > a {
+      margin-top:10px;
+    }
+  }
+  
+  .footer-clean .copyright {
+    margin-top:14px;
+    margin-bottom:0;
+    font-size:13px;
+    opacity:0.6;
+  }
 
 /* -------- Responsive Section -------------- */
 nav .fa-solid{
@@ -490,13 +570,17 @@ nav .fa-solid{
 }
 
 @media only screen and (max-width: 800px){
-    .video{
-        margin-top: 70%;
+    #header{
+        height: 75vh;
+    }
+    video{
+        margin-top: 20%;
         font-size: 24px;
+        width: 100%;
     }
 
-    .header-video h1{
-        font-size: 44px;
+    .text-overlay h1{
+        font-size: 32px;
     }
 
     nav .fa-solid{
