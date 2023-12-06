@@ -6,8 +6,23 @@
     <title>Εντιμοι Απατεώνες</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/445292ce18.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/EaselPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/PixiPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CustomEase.min.js"></script>
 </head>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body>
     <div id="header">
         <div class="container">
@@ -129,6 +144,34 @@
         </div>
     </div>
 
+    <!-- Carousel -->
+    <div class="container">
+        <div class="card-carousel">
+          <div class="card" id="1">
+            <div class="image-container"></div>
+            <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+          </div>
+          <div class="card" id="2">
+            <div class="image-container"></div>
+            <p>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+          </div>
+          <div class="card" id="3">
+            <div class="image-container"></div>
+            <p>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+          </div>  
+          <div class="card" id="4">
+            <div class="image-container"></div>
+            <p>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+          </div>
+          <div class="card" id="5">
+            <div class="image-container"></div>
+            <p>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
+          </div>
+        </div>
+        <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
+      </div>
+      <script src="carousel.js"></script>
+
     <!-- contact -->
     <div id="contact">
         <div class="container">
@@ -185,16 +228,13 @@
                             <li><a href="#">Benefits</a></li>
                         </ul>
                     </div>
-                        <p class="copyright">Εντιμοι Απατεωνες © 2023</p>
-                    </div>
+                    <p class="copyright">Εντιμοι Απατεωνες © 2023</p>
                 </div>
             </div>
         </footer>
     </div>
 
-
 <script>
-
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
@@ -231,5 +271,15 @@
     });
 </script>
 <script src="Google Sheet.js"></script>
+<script>
+    document.addEventListener('visibilitychange', function (event) {
+    if (document.hidden) {
+      const T= "Μας ψάχνεις; Εδώ ειμαστε! "+ "🎭";
+      document.title = T;
+    } else {
+      document.title = "Έντιμοι Απατεώνες";
+    }
+});
+</script>
 </body>
 </html>
