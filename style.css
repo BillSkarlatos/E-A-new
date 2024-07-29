@@ -92,9 +92,10 @@ nav ul li a:hover::after{
 /* ------------ Landing Section -----------------  */
 
 .header-video{
-    width: 90vw;
+    width: 80vw;
     position: relative;
-    margin-top: 4%;
+    padding-top: 15vh;
+    padding-bottom: 5vh;
     font-size: 30px;
     align-items: center;
     justify-content: center;
@@ -140,6 +141,7 @@ nav ul li a:hover::after{
 #about{
     padding: 80px; 
     margin-top: 100px;  
+    margin-top: 30vh;
 }
 
 .row{

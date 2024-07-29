@@ -1,0 +1,88 @@
+.card-container {
+    padding-top: 10vh;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90vw;
+    height: 30vh;
+    margin: 5vh auto;
+    border: 2px solid #000;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 1s ease;
+    background-image: linear-gradient(to right top, #efb6f7, #cb8bdb, #a662bf, #8039a5, #57068c);
+}
+
+.card img {
+    height: 100%;
+    width: 30%;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px; /* Rounded edges for image */
+}
+
+#card-right img {
+    border-radius: 0 15px 15px 0; /* Adjusted for image on the right */
+}
+
+.card-text {
+    width: 70%;
+    text-align: center;
+}
+
+.card-text p {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card:hover {
+    width: 91vw;
+    height: 31vh;
+    background-color: #57068c;
+    transition: 1s;
+}
+
+.card:hover img {
+    height: 31vh;
+    width: 31vw;
+}
+
+.card:hover #card-right img {
+    height: 31vh;
+    width: 31vw;
+}
+
+.card-left:hover, .card-right:hover {
+    width: 91vw;
+    height: 31vh;
+}
+
+.card-left:hover img, .card-right:hover img {
+    height: 31vh;
+    width: 31vw;
+}
+
+/* .card-left, .card-right {
+    transition: transform 0.5s;
+} */
+
+.card-left:hover, .card-right:hover {
+    transform: scale(1.01);
+}
+
+.card:hover img {
+    height: 31vh;
+}
+
+.card:hover .card-text p {
+    font-size: 1.6rem;
+    color: azure;
+}
+
+/* Additional hover effect for scale */
+.card:hover {
+    transform: scale(1.01);
+}
