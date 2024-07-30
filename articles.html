@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Παραστάσεις</title>
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/445292ce18.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/EaselPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/PixiPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CustomEase.min.js"></script>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+    <!-- Header -->
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo"><img src="Images/logo12.png"></div>
+            <ul id="sidebar">
+                <li><a href="index.html">Αρχική</a></li>
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+    </div>
+    
+    <!-- Cards -->
+    <div class="card-container">
+        <div id="card-left" class="card">
+            <img src="Images/Trelh.png" alt="Image Left" class="card-image">
+            <div class="card-text">
+                <p>Η Τρελή του Σαγιό - 2023</p>
+            </div>
+        </div>
+
+        <div id="card-right" class="card">
+            <div class="card-text">
+                <p>Bold Text on the Left</p>
+            </div>
+            <img src="image-right.jpg" alt="Image Right" class="card-image">
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', function() {
+            window.location.href = 'example.html';
+        });
+    });
+</script>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tname){
+      for(tbl of tablinks){
+        tbl.classList.remove("active-link");
+      }
+      for(tbc of tabcontents){
+        tbc.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tname).classList.add("active-tab")
+    }
+
+    var sideBar=document.getElementById("sidebar");
+
+    function openMenu(){
+        sideBar.style.right = "0"
+    }
+
+    function closeMenu(){
+        sideBar.style.right = "-200px"
+    }
+
+    window.addEventListener('scroll', function() {
+    var navbar = document.querySelector('.navbar');
+    var scrolled = window.scrollY > 0;
+
+    if (scrolled) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+    });
+</script>
+</html>

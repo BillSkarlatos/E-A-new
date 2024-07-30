@@ -710,7 +710,7 @@ nav .fa-solid{
 
     video{
         margin-top: 20%;
-        font-size: 24px;
+        font-size: 4vw;
         width: 100%;
     }
 
@@ -720,7 +720,9 @@ nav .fa-solid{
 
     #about{
         margin-top: 0;
+        padding: 0;
     }
+
     nav .fa-solid{
         display: block;
         font-size: 25px;
@@ -767,6 +769,8 @@ nav .fa-solid{
 
     .col1 img{
         width: 90%;
+        position: relative;
+        left: 5vw;
     }
 
     .col2{
