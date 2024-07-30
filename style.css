@@ -696,9 +696,18 @@ nav .fa-solid{
 }
 
 @media only screen and (max-width: 800px){
+    html, body{
+        overflow-x: hidden;
+    }
+    
     #header{
         height: 75vh;
     }
+
+    .header-video{
+        left: 0;
+    }
+
     video{
         margin-top: 20%;
         font-size: 24px;
@@ -706,9 +715,12 @@ nav .fa-solid{
     }
 
     .text-overlay h1{
-        font-size: 32px;
+        font-size: 5vw;
     }
 
+    #about{
+        margin-top: 0;
+    }
     nav .fa-solid{
         display: block;
         font-size: 25px;
