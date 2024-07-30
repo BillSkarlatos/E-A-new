@@ -384,6 +384,7 @@ span.portfolio{
     text-decoration: none;
     color: #57068c;
     transition: 0.6s;
+    cursor: pointer;
 }
 
 .btn:hover{
