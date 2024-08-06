@@ -702,6 +702,7 @@ nav .fa-solid{
     
     #header{
         height: 75vh;
+        margin-bottom: 25vh;
     }
 
     .header-video{
@@ -712,6 +713,7 @@ nav .fa-solid{
         margin-top: 20%;
         font-size: 4vw;
         width: 100%;
+        
     }
 
     .text-overlay h1{
@@ -788,5 +790,15 @@ nav .fa-solid{
 
     .contact-left, .contact-right{
         flex-basis: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    #header{
+        height: 50vh;
+        margin-bottom: 5vh;
+    }
+    .header-video{
+        margin-top: -5vh;
     }
 }

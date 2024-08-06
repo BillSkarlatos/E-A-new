@@ -39,25 +39,40 @@
     
     <!-- Cards -->
     <div class="card-container">
-        <div id="card-left" class="card">
-            <img src="Images/Trelh.png" alt="Image Left" class="card-image">
+        <div id="card-left" class="card" data-url="https://humanitygreece.org/o-dimarchos-xanthis-vraveyse-to-humanity-greece-ka/ ">
+            <img src="Images/Humanity Greece logo.jpeg" alt="Image Left" class="card-image">
             <div class="card-text">
-                <p>Η Τρελή του Σαγιό - 2023</p>
+                <p>Humanity Greece</p>
             </div>
         </div>
 
-        <div id="card-right" class="card">
+        <div id="card-right" class="card" data-url="https://xanthipost.gr/2022/12/16/humanity-greece-%ce%b4%cf%81%ce%ac%cf%83%ce%b7-%ce%b1%ce%bb%ce%bb%ce%b7%ce%bb%ce%b5%ce%b3%ce%b3%cf%8d%ce%b7%cf%82-%ce%bc%ce%b5-%cf%84%ce%b7-%cf%83%cf%85%ce%bb%ce%bb%ce%bf%ce%b3/ ">
             <div class="card-text">
-                <p>Bold Text on the Left</p>
+                <p>Humanity Greece</p>
             </div>
-            <img src="image-right.jpg" alt="Image Right" class="card-image">
+            <img src="Images/Humanity Greece logo.jpeg" alt="Image Right" class="card-image">
+        </div>
+
+        <div id="card-left" class="card" data-url="https://www.youtube.com/watch?v=kN_YNfZm5us">
+            <img src="Images/Youtube logo.png" alt="Image Left" class="card-image">
+            <div class="card-text">
+                <p>5 Χρόνια ΕΑ</p>
+            </div>
+        </div>
+
+        <div id="card-right" class="card" data-url="https://empros.gr/2020/01/me-vravefseis-kai-chamogela-ekopsan-tin-pita-tous-oi-robospecialists/ ">
+            <div class="card-text">
+                <p>Εμπρός</p>
+            </div>
+            <img src="Images/Empros logo.png" alt="Image Right" class="card-image">
         </div>
     </div>
 </body>
 <script>
     document.querySelectorAll('.card').forEach(card => {
         card.addEventListener('click', function() {
-            window.location.href = 'example.html';
+            const url = this.getAttribute('data-url');
+            window.location.href = url;
         });
     });
 </script>
