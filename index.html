@@ -79,9 +79,39 @@
                     </div>
                 </div>
             </div>
-        </div>
-        
+        </div>  
     </div>
+
+<!-- News section -->
+<h1 class="subtitle">Τα <span class="portfolio">Νέα</span> των <span>Έντιμων Απατεώνων</span> </h1>
+<div class="carousel-container">
+    <div class="news-carousel">
+        <div class="carousel-card" style="background-image: url('Images/Ekklisiazouses.jpg');">
+            <div class="carousel-text">
+                <span class="card-subtitle">Ξάνθη, 29/8/2024</span>
+                <h2>Announcement Title</h2>
+                <p>This is a description of the announcement, it can fit a lot of words but it should be kept short and simple</p>
+            </div>
+        </div>
+        <div class="carousel-card" style="background-image: url('https://via.placeholder.com/600x400');">
+            <div class="carousel-text">
+                <span class="card-subtitle">Subtitle Text</span>
+                <h2>Card 2 Title</h2>
+                <p>This is the description for card 1.</p>
+            </div>
+        </div>
+        <div class="carousel-card" style="background-image: url('https://via.placeholder.com/600x400');">
+            <div class="carousel-text">
+                <span class="card-subtitle">Subtitle Text</span>
+                <h2>Card 3 Title</h2>
+                <p>This is the description for card 1.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-btn prev-btn">&#10094;</button>
+    <button class="carousel-btn next-btn">&#10095;</button>
+</div>
+
 
 <!-- Portfolio Section -->
     <div id="portfolio">
@@ -306,6 +336,33 @@
     document.title = "Έντιμοι Απατεώνες";
   }
 });
+</script>
+
+<script>
+    const news_carousel = document.querySelector('.news-carousel');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const cardWidth = news_carousel.querySelector('.carousel-card').clientWidth;
+        news_carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : 0;
+        updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        const totalCards = news_carousel.querySelectorAll('.carousel-card').length;
+        currentIndex = (currentIndex < totalCards - 1) ? currentIndex + 1 : totalCards - 1;
+        updateCarousel();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+
 </script>
 </body>
 </html>
