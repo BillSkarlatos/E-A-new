@@ -28,12 +28,10 @@
     <!-- Header -->
     <div class="container">
         <nav class="navbar">
-            <div class="logo"><img src="Images/logo12.png"></div>
+            <div class="logo"><img src="Images/logo12.png" style="cursor: pointer;" onclick="window.location.href='index.html';"></div>
             <ul id="sidebar">
-                <li><a href="index.html">Αρχική</a></li>
-                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                <li><a href="index.html"></a></li>
             </ul>
-            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
         </nav>
     </div>
 
@@ -124,30 +122,6 @@
     </div>
 </body>
 <script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tname){
-      for(tbl of tablinks){
-        tbl.classList.remove("active-link");
-      }
-      for(tbc of tabcontents){
-        tbc.classList.remove("active-tab");
-      }
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tname).classList.add("active-tab")
-    }
-
-    var sideBar=document.getElementById("sidebar");
-
-    function openMenu(){
-        sideBar.style.right = "0"
-    }
-
-    function closeMenu(){
-        sideBar.style.right = "-200px"
-    }
-
     window.addEventListener('scroll', function() {
     var navbar = document.querySelector('.navbar');
     var scrolled = window.scrollY > 0;
