@@ -123,8 +123,7 @@ nav ul li a:hover::after{
 
 #about{
     padding: 80px; 
-    margin-top: 100px;  
-    margin-top: 30vh;
+    margin-top: max(30vh, 250px)
 }
 
 .row{
