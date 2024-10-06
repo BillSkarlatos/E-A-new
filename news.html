@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>“Εκκλησιάζουσες - ΕΑ”</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Images/logo12.png">
+    <script src="https://kit.fontawesome.com/445292ce18.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/EaselPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/PixiPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CustomEase.min.js"></script>
+</head>
+<style>
+
+.card {
+    margin-top: 15vh;
+    width: 90vw;
+    left: 5vw;
+    position: relative;
+    border-radius: 25px;
+    display: flex;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+
+}
+
+/* Styling for the text content */
+.card-text {
+  padding: 20px;
+  flex: 1;
+}
+
+.card-date {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-subtext {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Styling for the carousel */
+.carousel-container {
+  position: relative;
+  flex: 1;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  object-fit: cover;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .carousel-image {
+    width: 100%;
+  }
+
+  button {
+    top: auto;
+    bottom: 10px;
+  }
+}
+
+</style>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Header -->
+    <div class="container">
+        <nav class="navbar" style="justify-content: center;">
+            <div class="logo"><img src="Images/logo12.png" style="cursor: pointer;" onclick="window.location.href='index.html';"></div>
+        </nav>
+    </div>
+    <div class="card">
+      <div class="card-text">
+        <p class="card-date">October 6, 2024</p>
+        <h2 class="card-title">Sample Title</h2>
+        <p class="card-subtext">This is a brief subtext describing the content or context of the card. It gives users a quick overview.</p>
+      </div>
+  
+      <div class="carousel-container">
+        <div class="carousel">
+          <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 1">
+          <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 2">
+          <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 3">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+    </div> 
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const images = document.querySelectorAll('.carousel-image');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        let currentIndex = 0;
+
+        function updateCarousel() {
+        const offset = -currentIndex * images[0].clientWidth;
+        carousel.style.transform = `translateX(${offset}px)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateCarousel();
+        });
+    </script>
+  </body>
+</html>
