@@ -310,7 +310,7 @@ span.portfolio{
     width: 100%;
     color: #FFF;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.5),#150050);
+    background: linear-gradient(rgba(0,0,0,0.5),#071952);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -365,9 +365,10 @@ span.portfolio{
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color: #57068c;
+    color: #071952;
     transition: 0.6s;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .btn:hover{

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>“Εκκλησιάζουσες - ΕΑ”</title>
+    <title>“Τα νέα των Έντιμων Απατεώνων”</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="Images/logo12.png">
     <script src="https://kit.fontawesome.com/445292ce18.js" crossorigin="anonymous"></script>
@@ -21,11 +21,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CustomEase.min.js"></script>
 </head>
 <style>
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
-.card {
+div.first{
     margin-top: 15vh;
+}
+.card {
+    margin-top: 5vh;
     width: 90vw;
-    left: 5vw;
     position: relative;
     border-radius: 25px;
     display: flex;
@@ -33,7 +41,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: width 0.3s ease-in-out;
-
+    border-width: 2px;
+    border-color: #37B7C3;
+    border-style: solid;
 }
 
 /* Styling for the text content */
@@ -102,8 +112,7 @@ button {
 @media (max-width: 768px) {
   .card {
     flex-direction: column;
-    width: 90%;
-    max-width: 400px;
+    width: 80vw;
   }
 
   .carousel-image {
@@ -128,23 +137,45 @@ button {
             <div class="logo"><img src="Images/logo12.png" style="cursor: pointer;" onclick="window.location.href='index.html';"></div>
         </nav>
     </div>
-    <div class="card">
-      <div class="card-text">
-        <p class="card-date">October 6, 2024</p>
-        <h2 class="card-title">Sample Title</h2>
-        <p class="card-subtext">This is a brief subtext describing the content or context of the card. It gives users a quick overview.</p>
-      </div>
-  
-      <div class="carousel-container">
-        <div class="carousel">
-          <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 1">
-          <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 2">
-          <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 3">
+    <div class="card-container">
+        <!-- News card -->
+        <div class="first card">
+        <div class="card-text">
+            <p class="card-date">Ξάνθη, 9/9/2024</p>
+            <h2 class="card-title">Sample Title</h2>
+            <p class="card-subtext">This is a brief subtext describing the content or context of the card. It gives users a quick overview.</p>
         </div>
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-      </div>
-    </div> 
+    
+        <div class="carousel-container">
+            <div class="carousel">
+            <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 1">
+            <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 2">
+            <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 3">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        </div> 
+        <!-- ------ -->
+        <div class="card">
+            <div class="card-text">
+            <p class="card-date">Ξάνθη, 9/12/2024</p>
+            <h2 class="card-title">Sample Title</h2>
+            <p class="card-subtext">This is a brief subtext describing the content or context of the card. It gives users a quick overview.</p>
+            </div>
+        
+            <div class="carousel-container">
+            <div class="carousel">
+                <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 1">
+                <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 2">
+                <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 3">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            </div>
+        </div> 
+    </div>
+
     <script>
         const carousel = document.querySelector('.carousel');
         const images = document.querySelectorAll('.carousel-image');
