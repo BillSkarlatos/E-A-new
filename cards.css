@@ -14,7 +14,7 @@
     overflow: hidden;
     cursor: pointer;
     transition: all 1s ease;
-    background-image: linear-gradient(to right top, #efb6f7, #cb8bdb, #a662bf, #8039a5, #57068c);
+    background-image: linear-gradient(to right top, #37B7C3, #071952);
 }
 
 .card img {

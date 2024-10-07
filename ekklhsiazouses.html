@@ -118,19 +118,22 @@
         </footer>
     </div>
 </body>
-<script>
-    window.addEventListener('scroll', function() {
-    var navbar = document.querySelector('.navbar');
-    var scrolled = window.scrollY > 0;
 
-    if (scrolled) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-    });
-</script>
 <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tname){
+      for(tbl of tablinks){
+        tbl.classList.remove("active-link");
+      }
+      for(tbc of tabcontents){
+        tbc.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tname).classList.add("active-tab")
+    }
+    
     document.addEventListener('visibilitychange', function (event) {
     if (document.hidden) {
       const T= "Μας ψάχνεις; Εδώ ειμαστε! "+ "🎭";

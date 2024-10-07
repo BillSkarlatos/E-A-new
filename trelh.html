@@ -3,9 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Παράσταση - Η Τρελή του Σαγιό</title>
+    <title>“Η τρελή του Σαγιό - ΕΑ”</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Images/logo12.png">
+    <script src="https://kit.fontawesome.com/445292ce18.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/EaselPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/PixiPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CustomEase.min.js"></script>
 </head>
 <body>
-    <h1>Hi</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Header -->
+    <div class="container">
+        <nav class="navbar" style="justify-content: center;">
+            <div class="logo"><img src="Images/logo12.png" style="cursor: pointer;" onclick="window.location.href='index.html';"></div>
+        </nav>
+    </div>
+
+    <!-- Show info / same structure as the about us section -->
+    <div class="container" style="padding: 15vh 2vh;">
+        <div class="row">
+            <div class="col1">
+                <img src="Images/Trelh.png" alt="">
+            </div>
+            <div class="col2">
+                <h1 class="subtitle">Παράσταση <span>Η τρελή του Σαγιό</span> 2023</h1>
+                <p>Λείπουν οι <span style="color: purple; font-weight: 750;">#Έντιμοι</span> από τον Αύγουστο;<br><br>
+
+                    Όχι βέβαια! Οι «Εντιμοι Απατεώνες» επιστρέφουν δυναμικά στη σκηνη, μετά από 2 χρόνια απουσίας εξαιτίας των συνθηκών του ιού covid-19, για να γιορτάσουν τα επετειακά τους γενέθλια μαζί με το αγαπημένο τους κοινό.<br><br>
+                    
+                    Φέτος, θα σας διηγηθεί μια <span style="color: purple; font-weight: 750;">#Ιστορία_Γένους_Θηλυκού</span>.<br><br>
+                    Αριστοφάνους «ΕΚΚΛΗΣΙΑΖΟΥΣΕΣ»
+                    </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Περίληψη Παράστασης</p>
+                    <p class="tab-links" onclick="opentab('Education')">Οι ευγενικοί χορηγοί μας</p>
+                </div>
+                
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li>
+                            <p>
+                                Η ιστορία μας λοιπόν, εξελίσσεται γύρω από την Πραξαγόρα, που σε μια εποχή απόλυτης κοινωνικής και πολιτικής παρακμής, μεταμφιεσμένη σε άντρα, παίρνει την εξουσία προτείνοντας ένα νέο καθεστώς κοινοκτημοσύνης. Παρά όμως το ποσό ιδανικό φαίνεται στην αρχή το σχέδιό της, τα πλάνα της αποδεικνύονται ουτοπικά και η ιστορία περιπλέκεται. <br><br>
+
+                                “Τι σημαίνει Δημοκρατία;”<br>
+                                “Γιατί διαφθείρεται όποιος αποκτά εξουσία;”<br>
+                                “Μπορεί άραγε, ένας τόπος να κυβερνηθεί με ισότητα και δικαιοσύνη;”<br><br>
+                                Αυτές και πολλές ακόμα ερωτήσεις θα προσπαθήσουν να βιώσουν διαδραστικά φέτος οι Έντιμοι μέσα από μια διαχρονική κωμωδία, που καυτηριάζει την πραγματικότητα και παραμένει ορθή στα μηνύματά της από την αρχαιότητα έως σήμερα. <br><br>
+
+                                Ετοιμαστείτε για πολύ γέλιο, πολλή μουσική μα και σκέψη, γιατί οι «Έντιμοι Απατεώνες» επέστρεψαν. <br><br>
+
+                                Φέτος, όπως και τις προηγούμενες χρονιές θα γίνει συλλογή τροφίμων για το Κοινωνικό Παντοπωλείο της Ιεράς Μητρόπολης Ξάνθης.
+                                ΕΙΣΟΔΟΣ ΕΛΕΥΘΕΡΗ <br><br>
+
+                                Σας περιμένουμε. Ο διάλογος συνεχίζεται..!
+
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>Παραστάσεις</span><br>Κάθε χρόνο οι Έντιμοι Απατεώνες ανεβάζουν από μια καινούργια παράσταση στην Ξάνθη αλλά και σε άλλες πόλεις . . .</li>
+                        <li><span>Συλλογή τροφίμων</span><br>Παράλληλα με τις καλλλιτεχνικές δράσεις της ομάδας, κάνουμε ότι μπορούμε για να βοηθήσουμε τους συμπολίτες μας που το έχουν ανάγκη μέσω της συλλογής τροφίμων και της δωρεάς αυτών σε οργανισμούς . . .</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer-clean">
+        <footer>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Οι Έντιμοι Απατεώνες</h3>
+                        <ul>
+                            <li><a href="index.html#about">Ποιοί Είμαστε</a></li>
+                            <li><a href="index.html#shows">Οι παραστάσεις μας</a></li>
+                            <li><a href="index.html#services">Γίνε Μέλος</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Legacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 item">
+                        <h3>Careers</h3>
+                        <ul>
+                            <li><a href="#">Job openings</a></li>
+                            <li><a href="#">Employee success</a></li>
+                            <li><a href="#">Benefits</a></li>
+                        </ul>
+                    </div>
+                    <p class="copyright">Εντιμοι Απατεωνες © 2024</p>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tname){
+      for(tbl of tablinks){
+        tbl.classList.remove("active-link");
+      }
+      for(tbc of tabcontents){
+        tbc.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tname).classList.add("active-tab")
+    }
+    
+    document.addEventListener('visibilitychange', function (event) {
+    if (document.hidden) {
+      const T= "Μας ψάχνεις; Εδώ ειμαστε! "+ "🎭";
+      document.title = T;
+    } else {
+      document.title = "Εκκλησιάζουσες" + "🎭";
+    }
+  });
+</script>
+  
 </html>
