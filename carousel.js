@@ -97,7 +97,7 @@ class CardCarousel extends DraggingEvent {
     this.cards = container.querySelectorAll(".card")
     console.log(this.cards.length)
     // Carousel data
-    this.centerIndex = (this.cards.length - 1) / 2;
+    this.centerIndex = Math.floor((this.cards.length - 1) / 2);
     this.cardWidth = this.cards[0].offsetWidth / this.container.offsetWidth * 100
     this.xScale = {};
     
