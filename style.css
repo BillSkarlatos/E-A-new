@@ -384,6 +384,10 @@ span.portfolio{
 
 /* ------------ Contact me ------------------ */
 
+#contact{
+    padding: 0 10px;
+}
+
 .contact-left{
     flex-basis: 35%;
 }
