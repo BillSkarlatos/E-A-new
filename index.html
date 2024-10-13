@@ -20,6 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CustomEase.min.js"></script>
 </head>
+<link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -30,24 +31,28 @@
             <nav class="navbar">
                 <div class="logo"><a href="#header"><img src="Images/logo12.png"></a></div>
                 <ul id="sidebar">
-                    <li><a href="#about">Ποιοί είμαστε;</a></li>
-                    <li><a href="#News">Τα νέα μας:</a></li>
-                    <li><a href="#portfolio">Είπαν για εμάς ...</a></li>
-                    <li><a href="#services">Γίνε μέλος:</a></li>
-                    <li><a href="#shows">Παραστάσεις</a></li>
-                    <li><a href="#contact">Βρες μας</a></li>
+                    <li><a href="#about">ΠΟΙΟΙ ΕΙΜΑΣΤΕ</a></li>
+                    <li><a href="#News">ΤΑ ΝΕΑ ΜΑΣ</a></li>
+                    <li><a href="#portfolio">ΕΙΠΑΝ ΓΙΑ ΕΜΑΣ</a></li>
+                    <li><a href="#services">ΓΙΝΕ ΜΕΛΟΣ</a></li>
+                    <li><a href="#shows">ΠΑΡΑΣΤΑΣΕΙΣ</a></li>
+                    <li><a href="#contact">ΒΡΕΣ ΜΑΣ</a></li>
                     <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openMenu()"></i>
             </nav>
-            <div class="header-video">
-              <video autoplay muted loop id="video-background">
-                <source src="Videos/imageCompVideo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
         </div>
     </div>
+
+    <div class="container">
+        <div class="header-video">
+            <video autoplay muted loop id="video-background">
+              <source src="Videos/imageCompVideo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+    </div>
+    
     <!-- About Section -->
     <div id="about">
         <div class="container">
@@ -56,27 +61,26 @@
                     <img src="Images/10y.jpg" alt="">
                 </div>
                 <div class="col2">
-                    <h1 class="subtitle">Λίγα λόγια για τους <span>ΕΑ</span></h1>
+                <div class="col2">
+                    <h1 class="subtitle"><span>Λίγα λόγια</span> για εμάς:</h1>
                     <p>Η θεατρική μας ομάδα δημιουργήθηκε το 2013 από μία πρωτοβουλία Ξανθιωτών μαθητών και φοιτητών, με ένα κοινό όραμα: «Να προσφέρουμε χαρά και χαμόγελο σε όποιον το έχει ανάγκη!». Βασικό λόγος μας ήταν πως και εμείς είχαμε την ίδια ανάγκη. Έτσι, λοιπόν, προκειμένου αυτά να υπάρχουν μόνιμα τόσο στα δικά μας πρόσωπα όσο και των θεατών, λάβαμε δράση και δημιουργήσαμε την θεατρική ομάδα «Έντιμοι Απατεώνες». Πάντα με «Έντιμο» τρόπο αποσκοπούμε στο να μεταδίδουμε γέλιο και να παρέχουμε ψυχαγωγία όχι, μόνο μέσω του θεάτρου, της υποκριτικής, της μουσικής και του χορού, αλλά και μέσω του εθελοντισμού και της κοινωνικής προσφοράς μας στην τοπική κοινωνία της Ξάνθης και κατ’ επέκταση σε όποιο μέρος της επικράτειας υπάρχει ανάγκη. </p>
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Ο Σκοπός μας</p>
                         <p class="tab-links" onclick="opentab('Education')">Οι δράσεις μας</p>
                     </div>
                     
-                    <div class="tab-contents active-tab" id="skills">
-                        <p>Πιο συγκεκριμένα, ως Έντιμοι Απατεώνες κάθε χρόνο πραγματοποιούμε και μία νέα παράσταση στην πόλη της Ξάνθης, αλλά και σε άλλες πόλεις στις οποίες μας προσκαλούν. Σκοπός μας μέσα από τις παραστάσεις να μεταδώσουμε χαμόγελα και παράλληλα, να επικοινωνήσουμε καίρια κοινωνικά μηνύματα. Με τη διάδρασή μας επιχειρούμε να επιτύχουμε την αφύπνιση του νου και να κρατήσουμε σε εγρήγορση κάθε ανθρώπινη αίσθηση. 
-                        </p>
+                    <div class="tab-contents active-tab" id="skills"> 
                         <ul>
-                            <li><span>Να φέρνουμε χαμόγελα</span><br>Οι Ε Α κάθε χρόνο ανεβάζουν καινούργιες παραστάσεις κάθε χρόνο . . . </li>
-                            <li><span>Να βοηθάμε τους συνανθρώπους μας</span><br>Κάθε χρόνο, όλο και περισσότεροι συμπολίτες μας βρίσκονται σε ανάγκη, εμείς δεν μένουμε άπραγοι</li>
+                            <li> <i class="fa-regular fa-circle-dot"></i>    <span>Να φέρνουμε χαμόγελα</span><br>Μέσα από τις παραστάσεις, επιχειρούμε να μεταδώσουμε χαμόγελα και παράλληλα, να επικοινωνήσουμε καίρια κοινωνικά μηνύματα.</li>
+                            <li> <i class="fa-regular fa-circle-dot"></i>    <span>Να βοηθάμε τους συνανθρώπους μας</span><br>Κάθε χρόνο, όλο και περισσότεροι συμπολίτες μας βρίσκονται σε ανάγκη, εμείς δεν μένουμε άπραγοι.</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="Education">
-                        <p>Παράλληλα, με τις καλλιτεχνικές μας δράσεις ως Σωματείο επιχειρούμε να συνδράμουμε σε κοινωνικές ομάδες και συμπολίτες μας που το έχουν πραγματικά ανάγκη. Με τις παραστάσεις μας αντίστοιχα σε κάθε πόλη πραγματοποιούμε ανοιχτό κάλεσμα για συλλογή ειδών πρώτης ανάγκης, τα οποία και επιτόπου παραδίδουμε σε ομάδες και φορείς. Πιο συγκεκριμένα, επιχειρούμε: </p>
                         <ul>
-                            <li><span>Συλλογή ειδών πρώτης ανάγκης</span><br>Με τη συλλογή τροφίμων και φαρμακευτικού υλικού για το Κοινωνικό Παντοπωλείο της Ιεράς Μητροπόλεως Ξάνθης και Περιθεωρίου</li>
-                            <li><span>Αποστολή αγαθών</span><br>Με την αποστολή αγαθών και ειδών πρώτης ανάγκης σε πυρόπληκτες οικογένειες, αλλά και ανθρώπους που επιχειρούν, όπως εθελοντές, διασώστες, πυροσβέστες. </li>
-                            <li><span>Συλλογή ειδών πρώτης ανάγκης</span><br>Με τη συλλογή τροφίμων και φαρμακευτικού υλικού για το Κοινωνικό Παντοπωλείο της Ιεράς Μητροπόλεως Ξάνθης και Περιθεωρίου</li>
+                            <li><i class="fa-solid fa-thumbtack"></i>    <span>Συλλογή ειδών πρώτης ανάγκης</span><br>Συλλογή τροφίμων και φαρμακευτικού υλικού για το Κοινωνικό Παντοπωλείο της Ιεράς Μητροπόλεως Ξάνθης και Περιθεωρίου</li>
+                            <li><i class="fa-solid fa-thumbtack"></i>    <span>Αποστολή αγαθών</span><br>Αποστολή αγαθών και ειδών πρώτης ανάγκης σε πυρόπληκτες οικογένειες, αλλά και ανθρώπους που επιχειρούν, όπως εθελοντές, διασώστες, πυροσβέστες. </li>
+                            <li><i class="fa-solid fa-thumbtack"></i>    <span>Humanity Greece</span><br>Αποστολή ειδών πρώτης ανάγκης – τροφίμων, φαρμάκων, ειδών υγιεινής κ.α. – στο Humanity Greece, προκειμένου να συνδράμουμε στη δράση για τους πυρόπληκτους της Αττικής, αλλά και τους πυροσβέστες – εθελοντές που επιχειρούν στα πύρινα μέτωπα.</li>
+                            <li><i class="fa-solid fa-thumbtack"></i>    <span>Συνεργασία με πολιτιστικούς συλλόγους</span><br>Συνεργασία μας με άλλους Πολιτιστικούς Συλλόγους του νομού μας και όμορων νομών, καθώς και την Περιφέρεια Ανατολικής Μακεδονίας και Θράκης, με σκοπό να συνεισφέρουμε κατά το δυνατόν περισσότερο στους συνανθρώπους μας, όπως αυτών που το 2023 επλήγησαν από τις καταστροφικές πυρκαγιές. </li>
                         </ul>
                     </div>
                 </div>
@@ -85,41 +89,43 @@
     </div>
 
 <!-- News section -->
-<h1 class="subtitle" id="News">Τα <span class="portfolio">Νέα</span> των <span>Έντιμων Απατεώνων</span> </h1>
-<div class="carousel-container">
-    <div class="news-carousel">
-        <div class="carousel-card" style="background-image: url('Images/Ekklisiazouses.jpg');">
-            <div class="carousel-text">
-                <span class="card-subtitle">Ξάνθη, 29/8/2024</span>
-                <h2>Announcement Title</h2>
-                <p>This is a description of the announcement, it can fit a lot of words but it should be kept short and simple</p>
+<div class="news">
+    <h1 class="subtitle" id="News">Τα <span class="portfolio">νέα μας</span>:</h1>
+    <div class="carousel-container">
+        <div class="news-carousel">
+            <div class="carousel-card" style="background-image: url('Images/Ekklisiazouses.jpg');">
+                <div class="carousel-text">
+                    <span class="card-subtitle">Ξάνθη, 29/8/2024</span>
+                    <h2>Announcement Title</h2>
+                    <p>This is a description of the announcement, it can fit a lot of words but it should be kept short and simple</p>
+                </div>
+            </div>
+            <div class="carousel-card" style="background-image: url('https://via.placeholder.com/600x400');">
+                <div class="carousel-text">
+                    <span class="card-subtitle">Subtitle Text</span>
+                    <h2>Card 2 Title</h2>
+                    <p>This is the description for card 1.</p>
+                </div>
+            </div>
+            <div class="carousel-card" style="background-image: url('https://via.placeholder.com/600x400');">
+                <div class="carousel-text">
+                    <span class="card-subtitle">Subtitle Text</span>
+                    <h2>Card 3 Title</h2>
+                    <p>This is the description for card 1.</p>
+                </div>
             </div>
         </div>
-        <div class="carousel-card" style="background-image: url('https://via.placeholder.com/600x400');">
-            <div class="carousel-text">
-                <span class="card-subtitle">Subtitle Text</span>
-                <h2>Card 2 Title</h2>
-                <p>This is the description for card 1.</p>
-            </div>
-        </div>
-        <div class="carousel-card" style="background-image: url('https://via.placeholder.com/600x400');">
-            <div class="carousel-text">
-                <span class="card-subtitle">Subtitle Text</span>
-                <h2>Card 3 Title</h2>
-                <p>This is the description for card 1.</p>
-            </div>
-        </div>
+        <button class="carousel-btn prev-btn">&#10094;</button>
+        <button class="carousel-btn next-btn">&#10095;</button>
     </div>
-    <button class="carousel-btn prev-btn">&#10094;</button>
-    <button class="carousel-btn next-btn">&#10095;</button>
+    <a onclick="window.location.href='news.html';" class="btn">Δες Περισσότερα</a>
 </div>
-<a onclick="window.location.href='news.html';" class="btn">Δες Περισσότερα</a>
 
 
 <!-- Portfolio Section -->
     <div id="portfolio">
         <div class="container">
-            <h1 class="subtitle">Για τους <span class="portfolio">Έντιμους Απατεώνες</span> έγραψαν</h1>
+            <h1 class="subtitle">Για εμάς <span class="portfolio">έγραψαν</span>:</h1>
             <div class="work-list">
                 <div class="work">
                     <img src="Images/Humanity Greece logo.jpeg">
@@ -189,7 +195,7 @@
 
     <!-- Carousel -->
     <div class="container" id="shows">
-        <h1 class="subtitle">Οι <span>Παραστάσεις</span> των Έντιμων Απατεώνων</h1>
+        <h1 class="subtitle">Οι <span>Παραστάσεις</span> μας:</h1>
         <div class="card-carousel">
           <div class="card" id="1">
             <div class="image-container" onclick="window.location.href='trelh.html';"></div>
@@ -244,7 +250,7 @@
         <div class="container">
             <div class="row">
                 <div class="contact-left">
-                    <h1 class="subtitle">Βρες μας <span>εδώ</span></h1>
+                    <h1 class="subtitle">Βρες μας <span>εδώ</span>:</h1>
                     <p><a href="mailto:entimoiapatewnes@gmail.com"><i class="fa-solid fa-envelope"></i></a>entimoiapatewnes@gmail.com</p>
                     <div class="social-media">
                         <a href="https://www.facebook.com/profile.php?id=100067675505590" target="_blank"><i class="fa-brands fa-facebook"></i></a>

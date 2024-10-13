@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'DM Sans'; */
     box-sizing: border-box;
 }
 
@@ -20,7 +21,7 @@ body{
 
 #header{
     width: 95%;
-    height: 100vh;
+    height: 20vh;
     background-size: cover;
     background-position: center;
 }
@@ -95,7 +96,6 @@ nav ul li a:hover::after{
 .header-video{
     width: 80vw;
     position: relative;
-    padding-top: 15vh;
     padding-bottom: 5vh;
     font-size: 30px;
     align-items: center;
@@ -122,8 +122,7 @@ nav ul li a:hover::after{
 /* About me */
 
 #about{
-    padding: 80px; 
-    margin-top: max(30vh, 250px)
+    padding: 50px 80px; 
 }
 
 .row{
@@ -168,6 +167,12 @@ nav ul li a:hover::after{
 
 span.portfolio{
     color: #071952;
+}
+
+/* -------------- News -----------------------*/
+
+.news{
+    padding: 50px 10px 0 10px;
 }
 
 /* -------------- Tab Titles ---------------- */
@@ -685,8 +690,7 @@ nav .fa-solid{
     }
     
     #header{
-        height: 75vh;
-        margin-bottom: 25vh;
+        height: 5vh;
     }
 
     .header-video{
@@ -779,7 +783,7 @@ nav .fa-solid{
 
 @media only screen and (max-width: 400px){
     #header{
-        height: 50vh;
+        height: 7.5vh;
         margin-bottom: 5vh;
     }
     .header-video{
