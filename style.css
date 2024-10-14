@@ -122,7 +122,7 @@ nav ul li a:hover::after{
 /* About me */
 
 #about{
-    padding: 50px 80px; 
+    padding: 30px 80px 50px; 
 }
 
 .row{
@@ -721,7 +721,7 @@ nav .fa-solid{
 
     #about{
         margin-top: 0;
-        padding: 0;
+        padding: 70px 0;
     }
 
     nav .fa-solid{
@@ -799,6 +799,10 @@ nav .fa-solid{
     }
     .header-video{
         margin-top: -5vh;
+    }
+
+    #about{
+        padding-top: 35px;
     }
 }
 
