@@ -38,4 +38,4 @@ Organisation based in Xanthi, Greece.
 
 -Poster
 
-![Entimoi Logo](Images/logo12.png | width=70)
+![Entimoi Logo](Images/logo12.png)
