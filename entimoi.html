@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>“Έντιμοι απατεώνες - ΕΑ”</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Images/logo12.png">
+    <script src="https://kit.fontawesome.com/445292ce18.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Flip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Observer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Draggable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/EaselPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/PixiPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CustomEase.min.js"></script>
+</head>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Header -->
+    <div class="container">
+        <nav class="navbar" style="justify-content: center;">
+            <div class="logo"><img src="Images/logo12.png" style="cursor: pointer;" onclick="window.location.href='index.html';"></div>
+        </nav>
+    </div>
+
+    <!-- Show info / same structure as the about us section -->
+    <div class="container" style="padding: 15vh 2vh;">
+        <div class="row">
+            <div class="col1">
+                <img src="Images/Logo EA.png" alt="">
+            </div>
+            <div class="col2">
+                <h1 class="subtitle">Παράσταση: <span>Έντιμοι απατεώνες</span> 2013</h1><span style="color: purple; font-weight: 750;"></span>
+                <p>
+                    <span style="color: purple; font-weight: 750;">«Έντιμοι Απατεώνες», εκεί όπου ξεκίνησαν όλα!</span>
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Περίληψη Παράστασης</p>
+                    <p class="tab-links" onclick="opentab('Education')">Οι ευγενικοί χορηγοί μας</p>
+                </div>
+                
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li>
+                            <p>
+                                Μια ξεκαρδιστική κωμωδία, σε διασκευή της θεατρικής μας ομάδας. Πρωταγωνιστές τέσσερις  αντίθετες και ξεχωριστές προσωπικότητες φίλων και στη μέση η κακή οικονομική τους μοίρα και οι δυσκολίες της καθημερινής ζωής. Νοίκι, χρέη και εργασία…πώς θα ανταπεξέλθεις και θα παραμείνεις τίμιος βιοπαλαιστής; Το τέλειο σχέδιο; Σκαρφίζονται τη μεγαλύτερη απάτη. Όμως τα πράγματα δεν πάνε όπως τα είχαν σχεδιαστεί, με αποτέλεσμα η μοίρα να τους θέτει το αιώνιο και μεγάλο δίλημμα: <br><br>  <span style="color: purple; font-weight: 750;">‘Αξίζει να είσαι τελικά «Έντιμος» ή «Απατεώνας»... ή μήπως «Έντιμος Απατεώνας»;</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>Παραστάσεις</span><br>Κάθε χρόνο οι Έντιμοι Απατεώνες ανεβάζουν από μια καινούργια παράσταση στην Ξάνθη αλλά και σε άλλες πόλεις . . .</li>
+                        <li><span>Συλλογή τροφίμων</span><br>Παράλληλα με τις καλλλιτεχνικές δράσεις της ομάδας, κάνουμε ότι μπορούμε για να βοηθήσουμε τους συμπολίτες μας που το έχουν ανάγκη μέσω της συλλογής τροφίμων και της δωρεάς αυτών σε οργανισμούς . . .</li>
+                    </ul>
+                </div>
+                <a onclick="window.location.href='shows.html';" class="btn btn2">Πίσω στις παραστάσεις</a>  
+            </div>
+        </div>
+    </div>
+   <!-- Footer -->
+   <div class="footer-clean">
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>Οι Έντιμοι Απατεώνες</h3>
+                    <ul>
+                        <li><a href="index.html#about">Ποιοί είμαστε</a></li>
+                        <li><a href="index.html#shows">Οι παραστάσεις μας</a></li>
+                        <li><a href="index.html#services">Γίνε μέλος</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>Social Media</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100067675505590">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/entimoi_apateones/">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/@%CE%88%CE%BD%CF%84%CE%B9%CE%BC%CE%BF%CE%B9%CE%91%CF%80%CE%B1%CF%84%CE%B5%CF%8E%CE%BD%CE%B5%CF%82">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 item">
+                    <h3>Τα νέα μας</h3>
+                    <ul>
+                        <li><a href="index.html#News">Τα τελευταία μας νέα</a></li>
+                        <li><a onclick="window.location.href='news.html';" style="cursor: pointer;">Όλα τα νέα μας</a></li>
+                    </ul>
+                </div>
+                <p class="copyright">Έντιμοι Απατεώνες © 2024</p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tname){
+      for(tbl of tablinks){
+        tbl.classList.remove("active-link");
+      }
+      for(tbc of tabcontents){
+        tbc.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tname).classList.add("active-tab")
+    }
+    
+    document.addEventListener('visibilitychange', function (event) {
+    if (document.hidden) {
+      const T= "Μας ψάχνεις; Εδώ ειμαστε! "+ "🎭";
+      document.title = T;
+    } else {
+      document.title = "Έντιμοι απατεώνες" + "🎭";
+    }
+  });
+</script>
+  
+</html>
