@@ -2,16 +2,40 @@
 
 Organisation based in Xanthi, Greece.
 
-## Subsites:
+# Subsites:
 
--Landing Site <br/>
+## Landing Site (index.html)
 
--Apply Site
+-About us
 
--Who we are
+-News and announcements
 
--Upcoming Show
+-Articles
 
--Past shows
+-Applications
 
--Contact Us
+-Shows
+
+-Contact
+
+-Footer
+
+## Shows (shows.html)
+
+-Clickable show cards
+
+## Articles (articles.html)
+
+-Clickable news articles about us
+
+## Show Page ({show-name}.html)
+
+-Overview
+
+-Description
+
+-Sponsors
+
+-Poster
+
+![Entimoi Logo](Images/logo12.png)
