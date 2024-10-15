@@ -385,7 +385,7 @@ span.portfolio{
 /* ------------ Contact me ------------------ */
 
 #contact{
-    padding: 0 10px;
+    padding: 0 50px;
 }
 
 .contact-left{
@@ -785,6 +785,10 @@ nav .fa-solid{
 
     .tab-contents li{
         font-size: 18px;
+    }
+
+    #contact{
+        padding: 0;
     }
 
     .contact-left, .contact-right{
