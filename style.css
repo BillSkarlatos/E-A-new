@@ -2,9 +2,11 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Roboto';
     /* font-family: 'DM Sans'; */
     box-sizing: border-box;
+    line-height: 1.4;
 }
 
 html{
@@ -216,7 +218,8 @@ span.portfolio{
 }
 
 .tab-contents ul li span{
-    color:#FB2576;
+    font-weight: 550;
+    color: #071952;
     font-size: 14px;
 }
 
@@ -476,7 +479,7 @@ form .btn2{
 /*--------------- footer ------------- */
 
 .footer-clean {
-    padding:50px 0;
+    padding:50px;
     background-color:#4b4c4d;
     color:#ccc;
   }
@@ -487,11 +490,16 @@ form .btn2{
     font-weight:bold;
     font-size:16px;
   }
+
+  .footer-clean li{
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
   
   .footer-clean ul {
     padding:0;
     list-style:none;
-    line-height:1.6;
+    line-height:1.5;
     font-size:14px;
     margin-bottom:0;
   }
