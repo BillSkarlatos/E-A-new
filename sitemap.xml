@@ -5,7 +5,11 @@
     <lastmod>2024-10-31</lastmod>
     <changefreq>always</changefreq>
     <priority>1.0</priority>
-  </url>
+    <image:image>
+      <image:loc>https://www.entimoiapatewnes.gr/Images/logo12.png</image:loc>
+      <image:title>Entimoi Apateones Logo</image:title>
+    </image:image>
+  </url>  
   <url>
     <loc>https://www.entimoiapatewnes.gr/shows.html</loc>
     <lastmod>2024-10-31</lastmod>
