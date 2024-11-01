@@ -287,6 +287,10 @@
         </div>
     </div>
 
+    <div class="slideshow-container">
+        <img id="slideshow" src="" alt="slideshow image">
+    </div>
+
     <!-- Footer -->
     <div class="footer-clean">
         <footer>
@@ -321,6 +325,38 @@
             </div>
         </footer>
     </div>
+
+<script>
+    // List of image paths
+const images = [
+  'Images/slideshow/1.jpg',
+  'Images/slideshow/2.jpeg',
+  'Images/slideshow/3.jpeg',
+  'Images/slideshow/4.jpeg',
+  'Images/slideshow/5.JPG',
+  'Images/slideshow/6.JPG',
+  'Images/slideshow/7.JPG',
+  'Images/slideshow/8.JPG',
+  'Images/slideshow/9.jpeg',
+  'Images/slideshow/10.jpg',
+  'Images/slideshow/11.jpg'
+];
+
+// Starting index
+let index = 0;
+
+// Function to update the image
+function showImage() {
+  const slideshow = document.getElementById('slideshow');
+  slideshow.src = images[index];
+  index = (index + 1) % images.length; // Loop back to start
+}
+
+// Set interval to change images every second
+setInterval(showImage, 1500);
+
+</script>
+
 
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
