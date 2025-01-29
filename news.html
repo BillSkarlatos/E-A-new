@@ -23,35 +23,57 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/CustomEase.min.js"></script>
 </head>
 <style>
-.card-container{
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
+
+.footer-clean {
+    width: 100%;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
 
 div.first{
     margin-top: 15vh;
 }
+.card-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center horizontally */
+    width: 100%;
+    margin-top: 5vh; /* Space from top */
+    margin-bottom: 5vh; /* Space from bottom */
+}
+
 .card {
-    margin-top: 5vh;
     width: 90vw;
-    position: relative;
+    max-width: 900px; /* Controls maximum width */
     border-radius: 25px;
     display: flex;
+    flex-direction: row; /* Keep text & carousel side by side */
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: width 0.3s ease-in-out;
-    border-width: 2px;
-    border-color: #37B7C3;
-    border-style: solid;
+    border: 2px solid #37B7C3;
+    padding: 20px;
+    margin-bottom: 20px; /* Spacing between cards */
 }
 
-/* Styling for the text content */
+/* Ensure the text and image stay side by side */
 .card-text {
-  padding: 20px;
-  flex: 1;
+    flex: 1;
+    padding: 20px;
+}
+
+.carousel-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-date {
@@ -72,42 +94,42 @@ div.first{
   color: #555;
 }
 
-/* Styling for the carousel */
-.carousel-container {
-  position: relative;
-  flex: 1;
-}
-
 .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  
 }
 
 .carousel-image {
   width: 100%;
+  height: 100%;
   object-fit: cover;
+  flex-shrink: 0; /* Prevents shrinking */
 }
 
+/* Buttons */
 button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 18px;
-  border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 10;
 }
 
 .prev {
-  left: 10px;
+    left: 10px;
 }
 
 .next {
-  right: 10px;
+    right: 10px;
 }
 
 /* Media Query for smaller screens */
@@ -116,6 +138,9 @@ button {
     flex-direction: column;
     width: 80vw;
   }
+  .carousel-container {
+        height: 250px; /* Adjust height for mobile */
+    }
 
   .carousel-image {
     width: 100%;
@@ -143,39 +168,30 @@ button {
         <!-- News card -->
         <div class="first card">
         <div class="card-text">
-            <p class="card-date">Ξάνθη, 9/9/2024</p>
-            <h2 class="card-title">Sample Title</h2>
-            <p class="card-subtext">This is a brief subtext describing the content or context of the card. It gives users a quick overview.</p>
+            <p class="card-date">Ξάνθη, 2/1/2025</p>
+            <h2 class="card-title">Δελτίο Τύπου</h2>
+            <p class="card-subtext">Την Πέμπτη, 2 Ιανουαρίου, η ομάδα μας πραγματοποίησε το καθιερωμένο της ετήσιο Winter Meeting. Έναν θεσμό, που για εμάς σηματοδοτεί το κλείσιμο μιας χρονιάς, όπου αξιολογούμε το έτος που μας πέρασε, επιθυμώντας παράλληλα να επιτύχουμε όλο και περισσότερα. <br>
+              Λίγο πριν την έναρξη του WM πραγματοποιήσαμε την ανταλλαγή δώρων, το δικό μας Secret Santa, που φέρει το όνομα «Secret Απατεώνας». Σε κλίμα χαράς και ανυπομονησίας ανταλλάξαμε τα δώρα μας, καθώς και ευχές για το Νέο Έτος. <br>
+              Έπειτα, αναλύσαμε την χρονιά που μας πέρασε, το 2024 και θέσαμε νέους στόχους και προσδοκίες για το 2025. Και φυσικά στο τέλος, νέα και παλαιότερα μέλη, κόψαμε και την βασιλόπιτά μας, με τυχερό τον αγαπημένο μας και Ιδρυτικό μας Μέλος, τον Σταύρο, στον οποίο ευχηθήκαμε από καρδιάς να συνεχίζει να πετυχαίνει και να φτάνει ψηλότερα, όπως πάντα. <br>
+              Ευχαριστούμε θερμά το Xanthi TechLab, που και φέτος μας παραχώρησε τον χώρο του! Ευχή μας για το Νέο Έτος, να υπάρχει χαρά, ευτυχία, υγεία, επιτυχίες, τύχη και πολλοί πολλοί Νέοι Στόχοι. Εξάλλου, Νέο Έτος σημαίνει και Νέα Αρχή! <br><br>
+              
+              Σωματείο «Θεατρική Ομάδα Έντιμοι Απατεώνες»</p>
         </div>
     
         <div class="carousel-container">
             <div class="carousel">
-            <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 1">
-            <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 2">
-            <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 3">
+            <img src="Images/news_1_1.jpg" class="carousel-image" alt="Image 1">
+            <img src="Images/news_1_2.jpg" class="carousel-image" alt="Image 2">
+            <img src="Images/news_1_3.jpg" class="carousel-image" alt="Image 3">
+            <img src="Images/news_1_4.jpg" class="carousel-image" alt="Image 1">
+            <img src="Images/news_1_5.jpg" class="carousel-image" alt="Image 1">
+            <img src="Images/news_1_6.jpg" class="carousel-image" alt="Image 1">
             </div>
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
         </div>
         </div> 
         <!-- ------ -->
-        <div class="card">
-            <div class="card-text">
-            <p class="card-date">Ξάνθη, 9/12/2024</p>
-            <h2 class="card-title">Sample Title</h2>
-            <p class="card-subtext">This is a brief subtext describing the content or context of the card. It gives users a quick overview.</p>
-            </div>
-        
-            <div class="carousel-container">
-            <div class="carousel">
-                <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 1">
-                <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 2">
-                <img src="https://via.placeholder.com/300x200" class="carousel-image" alt="Image 3">
-            </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-            </div>
-        </div> 
     </div>
 
     <div class="footer-clean">
@@ -221,19 +237,23 @@ button {
         let currentIndex = 0;
 
         function updateCarousel() {
-        const offset = -currentIndex * images[0].clientWidth;
-        carousel.style.transform = `translateX(${offset}px)`;
+            const imageWidth = images[0].clientWidth; // Get image width dynamically
+            carousel.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
         }
 
         nextButton.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        updateCarousel();
+            currentIndex = (currentIndex + 1) % images.length; // Loop through images
+            updateCarousel();
         });
 
         prevButton.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        updateCarousel();
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop backwards
+            updateCarousel();
         });
+
+        // Ensure images are aligned properly on window resize
+        window.addEventListener('resize', updateCarousel);
+
     </script>
   </body>
 </html>
